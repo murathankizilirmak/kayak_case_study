@@ -1,5 +1,6 @@
 package Pages;
 
+import Elements.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,12 +8,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage {
+public class BasePage extends MainPage {
     public static WebDriver driver;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, AWTException {
     }
     @Test
     public static void OpenPortal(String BrowserType) {
@@ -31,7 +34,7 @@ public class BasePage {
                     System.setProperty("webdriver.chrome.driver", ".\\Browserdrivers\\chromedriver.exe");
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
-                    driver.get("https://www.hepsiburada.com");
+                    driver.get("https://www.kayak.ch/");
                     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
                 }
         }

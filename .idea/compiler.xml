@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="HB_CaseStudy" />
         <module name="HB_Case" />
+        <module name="Kayak_Case_Study" />
       </profile>
     </annotationProcessing>
   </component>
